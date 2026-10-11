@@ -1,0 +1,2448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ahmed Sayed — Sales & Customer Experience</title>
+
+<meta name="description" content="Ahmed Sayed — Sales and Customer Experience professional with 7+ years of customer-facing experience.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --bg:#faf8f4;
+  --surface:#ffffff;
+  --text:#171717;
+  --muted:#645f58;
+  --border:#e5ddd0;
+
+  --accent:#d95014;
+  --accent-light:#ffecd9;
+  --accent-text:#8f3005;
+
+  --shadow:0 15px 45px rgba(30,20,10,.08);
+}
+
+body.dark{
+  --bg:#11100e;
+  --surface:#191815;
+  --text:#f4efe7;
+  --muted:#aaa39a;
+  --border:#302c26;
+
+  --accent:#ff8142;
+  --accent-light:#4a1e06;
+  --accent-text:#ffd4b8;
+
+  --shadow:0 15px 45px rgba(0,0,0,.3);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:"IBM Plex Sans",sans-serif;
+  line-height:1.6;
+  transition:.3s ease;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font-family:inherit;
+}
+
+.container{
+  width:min(1100px,92%);
+  margin:auto;
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress{
+  position:fixed;
+  top:0;
+  left:0;
+  width:0;
+  height:3px;
+  background:var(--accent);
+  z-index:9999;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(15px);
+  -webkit-backdrop-filter:blur(15px);
+  background:color-mix(in srgb,var(--bg) 86%,transparent);
+  border-bottom:1px solid var(--border);
+}
+
+.nav{
+  min-height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+
+/* LOGO */
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:4px;
+  text-decoration:none;
+  font-family:"Fraunces",serif;
+  font-size:21px;
+  font-weight:600;
+  color:var(--text);
+  letter-spacing:-0.5px;
+  transition:.3s;
+  flex-shrink:0;
+}
+
+.logo:hover{
+  color:var(--accent);
+}
+
+.logo strong{
+  font-weight:700;
+}
+
+.logo-dot{
+  color:var(--accent);
+  font-size:26px;
+  line-height:0;
+}
+
+
+/* NAV LINKS */
+
+.nav-links{
+  display:flex;
+  gap:22px;
+  overflow-x:auto;
+  white-space:nowrap;
+  scrollbar-width:none;
+  scroll-behavior:smooth;
+}
+
+.nav-links::-webkit-scrollbar{
+  display:none;
+}
+
+.nav-links a{
+  position:relative;
+  font-size:14px;
+  font-weight:500;
+  color:var(--muted);
+  transition:.25s;
+  padding:6px 0;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+  color:var(--accent);
+}
+
+
+/* Small animated line under active link */
+
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0;
+  height:2px;
+  background:var(--accent);
+  border-radius:10px;
+  transition:.3s ease;
+}
+
+.nav-links a.active::after{
+  width:100%;
+}
+
+
+/* THEME */
+
+.theme-btn{
+  border:1px solid var(--border);
+  background:var(--surface);
+  color:var(--text);
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:17px;
+  transition:.3s;
+  flex-shrink:0;
+}
+
+.theme-btn:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:calc(100vh - 75px);
+  display:flex;
+  align-items:center;
+  padding:70px 0;
+}
+
+.hero-inner{
+  max-width:800px;
+}
+
+.availability{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:8px 13px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  font-size:13px;
+  font-weight:500;
+  color:var(--muted);
+  margin-bottom:25px;
+}
+
+.availability span{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#4caf50;
+  box-shadow:0 0 12px #4caf50;
+}
+
+.hero h1{
+  font-family:"Fraunces",serif;
+  font-size:clamp(55px,10vw,100px);
+  line-height:.95;
+  letter-spacing:-4px;
+  margin-bottom:22px;
+}
+
+.hero h2{
+  font-size:clamp(24px,4vw,38px);
+  font-weight:500;
+  margin-bottom:20px;
+}
+
+.hero p{
+  max-width:680px;
+  font-size:18px;
+  color:var(--muted);
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:13px 22px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  transition:.25s;
+  cursor:pointer;
+  font-weight:600;
+  font-size:15px;
+}
+
+.btn-primary{
+  background:var(--accent);
+  color:white;
+  border-color:var(--accent);
+}
+
+.btn-secondary{
+  background:var(--surface);
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+  padding:100px 0;
+}
+
+.section-label{
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+  color:var(--accent);
+  font-weight:700;
+  margin-bottom:14px;
+}
+
+.section-title{
+  font-family:"Fraunces",serif;
+  font-size:clamp(36px,6vw,62px);
+  line-height:1.05;
+  letter-spacing:-1.5px;
+}
+
+
+/* =========================
+   APPROACH
+========================= */
+
+.approach{
+  padding:90px 0;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.approach-box{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:60px 40px;
+  box-shadow:var(--shadow);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.approach .section-label{
+  margin-bottom:25px;
+  display:inline-block;
+}
+
+.approach-heading{
+  font-family:"Fraunces",serif;
+  font-size:clamp(32px,5vw,56px);
+  line-height:1.25;
+  letter-spacing:-1px;
+  max-width:900px;
+  margin:0 auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px 16px;
+}
+
+.word{
+  opacity:0;
+  transform:translateY(20px);
+  transition:.6s ease;
+  display:inline-block;
+}
+
+.word.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.accent-word{
+  color:var(--accent);
+  font-style:italic;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-grid{
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.profile-text p{
+  color:var(--muted);
+  font-size:18px;
+  margin-top:25px;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.stat{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:25px;
+  transition:.3s;
+}
+
+.stat:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+  border-color:var(--accent);
+}
+
+.stat strong{
+  display:block;
+  font-family:"Fraunces",serif;
+  font-size:35px;
+  color:var(--accent);
+}
+
+.stat span{
+  color:var(--muted);
+  font-size:14px;
+  font-weight:500;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience{
+  background:var(--surface);
+}
+
+.exp-list{
+  margin-top:45px;
+  border-top:1px solid var(--border);
+}
+
+.exp-item{
+  border-bottom:1px solid var(--border);
+}
+
+.exp-head{
+  display:grid;
+  grid-template-columns:1fr auto auto;
+  gap:25px;
+  align-items:center;
+  padding:25px 5px;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.exp-head:hover{
+  color:var(--accent);
+}
+
+.exp-company{
+  font-family:"Fraunces",serif;
+  font-size:24px;
+}
+
+.exp-role{
+  color:var(--muted);
+  font-weight:500;
+}
+
+.exp-date{
+  color:var(--muted);
+  font-size:14px;
+  font-weight:500;
+}
+
+.plus{
+  width:28px;
+  height:28px;
+  border:1px solid var(--border);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  transition:.3s;
+}
+
+.exp-item.open .plus{
+  transform:rotate(45deg);
+  color:var(--accent);
+  border-color:var(--accent);
+  box-shadow:0 0 20px color-mix(in srgb,var(--accent) 35%,transparent);
+}
+
+.exp-content{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .45s ease;
+}
+
+.exp-content-inner{
+  padding:0 55px 28px 5px;
+  color:var(--muted);
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-container{
+  margin-top:45px;
+  display:flex;
+  flex-direction:column;
+  gap:35px;
+}
+
+.skills-category-title{
+  font-size:16px;
+  font-weight:700;
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:15px;
+}
+
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+
+.skill{
+  position:relative;
+  overflow:hidden;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:22px;
+  min-height:90px;
+  display:flex;
+  align-items:center;
+  font-weight:600;
+  transition:.3s;
+  cursor:pointer;
+}
+
+.skill::after{
+  content:"";
+  position:absolute;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background:var(--accent);
+  opacity:0;
+  filter:blur(35px);
+  right:-35px;
+  bottom:-35px;
+  transition:.3s;
+}
+
+.skill:hover,
+.skill.active{
+  transform:translateY(-5px);
+  border-color:var(--accent);
+  box-shadow:0 10px 35px color-mix(in srgb,var(--accent) 15%,transparent);
+}
+
+.skill.active::after{
+  opacity:.35;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education{
+  border-top:1px solid var(--border);
+}
+
+.edu-card{
+  margin-top:40px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:35px;
+  box-shadow:var(--shadow);
+}
+
+.edu-title{
+  font-family:"Fraunces",serif;
+  font-size:30px;
+}
+
+.edu-sub{
+  color:var(--muted);
+  margin-top:5px;
+  font-weight:500;
+}
+
+.pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:25px;
+}
+
+
+/* Education clickable courses */
+
+.pill{
+  padding:8px 14px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  color:var(--muted);
+  font-size:13px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s ease;
+  user-select:none;
+}
+
+.pill:hover,
+.pill.active{
+  color:var(--accent);
+  border-color:var(--accent);
+  background:var(--accent-light);
+  box-shadow:0 0 18px color-mix(in srgb,var(--accent) 18%,transparent);
+  transform:translateY(-2px);
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+  background:var(--surface);
+}
+
+.contact-grid{
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.contact-card{
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:25px;
+  transition:.3s;
+  cursor:pointer;
+}
+
+.contact-card:hover{
+  transform:translateY(-5px);
+  border-color:var(--accent);
+  box-shadow:var(--shadow);
+}
+
+.contact-icon{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--accent-light);
+  color:var(--accent-text);
+  margin-bottom:20px;
+}
+
+.contact-icon svg{
+  width:23px;
+  height:23px;
+  stroke:currentColor;
+}
+
+.contact-card h3{
+  margin-bottom:5px;
+}
+
+.contact-card p{
+  color:var(--muted);
+  font-size:14px;
+  word-break:break-word;
+  font-weight:500;
+}
+
+
+/* WHATSAPP */
+
+.whatsapp-icon{
+  width:25px;
+  height:25px;
+  fill:currentColor;
+}
+
+.whatsapp-card .contact-icon{
+  color:#25D366;
+  background:rgba(37,211,102,.12);
+}
+
+
+/* =========================
+   FLOATING BUTTONS
+========================= */
+
+.floating-actions{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  z-index:1000;
+}
+
+.whatsapp-float,
+.top-float{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:.3s;
+  cursor:pointer;
+  border:none;
+}
+
+.whatsapp-float{
+  background:#25D366;
+  color:white;
+  box-shadow:0 8px 25px rgba(37,211,102,.35);
+}
+
+.whatsapp-float:hover{
+  transform:translateY(-3px) scale(1.05);
+  box-shadow:0 12px 30px rgba(37,211,102,.5);
+}
+
+.whatsapp-float svg{
+  width:28px;
+  height:28px;
+  fill:white;
+}
+
+.top-float{
+  background:var(--surface);
+  color:var(--text);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  opacity:0;
+  visibility:hidden;
+  font-size:18px;
+}
+
+.top-float.show{
+  opacity:1;
+  visibility:visible;
+}
+
+.top-float:hover{
+  transform:translateY(-3px);
+  border-color:var(--accent);
+  color:var(--accent);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  padding:35px 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:14px;
+  font-weight:500;
+  border-top:1px solid var(--border);
+}
+
+
+/* =========================
+   REVEAL
+========================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(25px);
+  transition:.8s ease;
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+  .container{
+    width:90%;
+  }
+
+  .nav{
+    min-height:70px;
+    gap:12px;
+  }
+
+  .logo{
+    font-size:19px;
+  }
+
+  .nav-links{
+    gap:16px;
+    max-width:55%;
+  }
+
+  .nav-links a{
+    font-size:13px;
+  }
+
+  .theme-btn{
+    width:38px;
+    height:38px;
+  }
+
+  .hero{
+    min-height:auto;
+    padding-top:38px;
+    padding-bottom:70px;
+  }
+
+  .hero h1{
+    font-size:clamp(42px,12vw,62px);
+    letter-spacing:-2px;
+  }
+
+  .hero h2{
+    font-size:25px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  section{
+    padding:75px 0;
+  }
+
+  .approach-box{
+    padding:40px 20px;
+  }
+
+  .profile-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .stats{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .stat{
+    padding:20px;
+  }
+
+  .stat strong{
+    font-size:29px;
+  }
+
+  .exp-head{
+    grid-template-columns:1fr auto;
+    gap:8px;
+  }
+
+  .exp-date{
+    grid-column:1;
+    grid-row:2;
+  }
+
+  .plus{
+    grid-column:2;
+    grid-row:1 / span 2;
+  }
+
+  .exp-content-inner{
+    padding-right:5px;
+  }
+
+  .skills-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .skill{
+    padding:18px;
+    min-height:80px;
+    font-size:14px;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .edu-card{
+    padding:25px;
+  }
+
+  .floating-actions{
+    right:15px;
+    bottom:15px;
+  }
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media(max-width:380px){
+
+  .skills-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .stats{
+    grid-template-columns:1fr;
+  }
+
+  .nav-links{
+    max-width:50%;
+  }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="progress" id="progress"></div>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+  <div class="container nav">
+
+    <a href="#" class="logo" aria-label="Home">
+      Ahmed <strong>Sayed</strong><span class="logo-dot">.</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+
+      <a href="#profile">Profile</a>
+
+      <a href="#experience">Experience</a>
+
+      <a href="#skills">Skills</a>
+
+      <a href="#education">Education</a>
+
+      <a href="#contact">Contact</a>
+
+    </nav>
+
+    <button
+      class="theme-btn"
+      id="themeBtn"
+      aria-label="Toggle dark mode"
+      type="button">
+
+      ☾
+
+    </button>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+  <div class="container">
+
+    <div class="hero-inner reveal">
+
+      <div class="availability">
+
+        <span></span>
+
+        Available for new opportunities
+
+      </div>
+
+
+      <h1>
+        Ahmed Sayed.
+      </h1>
+
+
+      <h2>
+        Sales & Customer Experience
+      </h2>
+
+
+      <p>
+        Seven years of hands-on experience in sales, customer interaction
+        and technical support. I focus on understanding people, solving
+        problems and turning conversations into practical results.
+      </p>
+
+
+      <div class="hero-buttons">
+
+        <a
+          class="btn btn-primary"
+          href="Cv.pdf"
+          download="Ahmed_Sayed_CV.pdf">
+
+          📄 Download CV (PDF)
+
+        </a>
+
+
+        <a
+          class="btn btn-secondary"
+          href="#experience">
+
+          View My Experience →
+
+        </a>
+
+
+        <a
+          class="btn btn-secondary"
+          href="#contact">
+
+          Get in Touch
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     APPROACH
+========================= -->
+
+<section class="approach">
+
+  <div class="container reveal">
+
+    <div class="approach-box">
+
+      <div class="section-label">
+        My approach
+      </div>
+
+
+      <h2 class="approach-heading">
+
+        <span class="word">
+          Turning
+        </span>
+
+        <span class="word">
+          challenging
+        </span>
+
+        <span class="word">
+          situations
+        </span>
+
+        <span class="word">
+          into
+        </span>
+
+        <span class="word">
+          practical
+        </span>
+
+        <span class="word accent-word">
+          solutions.
+        </span>
+
+      </h2>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PROFILE
+========================= -->
+
+<section id="profile">
+
+  <div class="container">
+
+    <div class="profile-grid">
+
+
+      <div class="profile-text reveal">
+
+        <div class="section-label">
+          Profile
+        </div>
+
+
+        <h2 class="section-title">
+          Experience that works with people.
+        </h2>
+
+
+        <p>
+          My experience has taught me how to communicate clearly,
+          understand people's needs, solve problems under pressure,
+          and turn challenging situations into practical solutions.
+        </p>
+
+      </div>
+
+
+      <div class="stats reveal">
+
+
+        <div class="stat">
+
+          <strong>
+            7+
+          </strong>
+
+          <span>
+            Years in customer-facing roles
+          </span>
+
+        </div>
+
+
+        <div class="stat">
+
+          <strong>
+            3
+          </strong>
+
+          <span>
+            Roles across telecom, sales & law
+          </span>
+
+        </div>
+
+
+        <div class="stat">
+
+          <strong>
+            7
+          </strong>
+
+          <span>
+            Completed training courses
+          </span>
+
+        </div>
+
+
+        <div class="stat">
+
+          <strong>
+            3
+          </strong>
+
+          <span>
+            Languages (Arabic, English, Spanish)
+          </span>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section
+  class="experience"
+  id="experience">
+
+  <div class="container">
+
+    <div class="section-label">
+      Experience
+    </div>
+
+
+    <h2 class="section-title">
+      Where I've worked.
+    </h2>
+
+
+    <div class="exp-list">
+
+
+      <!-- VODAFONE -->
+
+      <div class="exp-item reveal">
+
+        <div
+          class="exp-head"
+          role="button"
+          tabindex="0"
+          aria-expanded="false">
+
+
+          <div>
+
+            <div class="exp-company">
+              Vodafone Egypt
+            </div>
+
+            <div class="exp-role">
+              Technical Support
+            </div>
+
+          </div>
+
+
+          <div class="exp-date">
+            2025 — Present
+          </div>
+
+
+          <div
+            class="plus"
+            aria-hidden="true">
+
+            +
+
+          </div>
+
+        </div>
+
+
+        <div class="exp-content">
+
+          <div class="exp-content-inner">
+
+            Handles inbound and outbound calls to assist customers
+            with inquiries, complaints and service requests.
+            Provides accurate information on Vodafone services,
+            offers and billing. Resolves customer issues efficiently
+            and logs every interaction in the CRM to protect
+            satisfaction and retention.
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- LAW -->
+
+      <div class="exp-item reveal">
+
+        <div
+          class="exp-head"
+          role="button"
+          tabindex="0"
+          aria-expanded="false">
+
+
+          <div>
+
+            <div class="exp-company">
+              Law Firm
+            </div>
+
+            <div class="exp-role">
+              Legal Trainee
+            </div>
+
+          </div>
+
+
+          <div class="exp-date">
+            2024 — 2025
+          </div>
+
+
+          <div
+            class="plus"
+            aria-hidden="true">
+
+            +
+
+          </div>
+
+        </div>
+
+
+        <div class="exp-content">
+
+          <div class="exp-content-inner">
+
+            Assisted a practicing lawyer with legal research,
+            case preparation and documentation. Attended court
+            sessions, drafted legal documents under supervision,
+            and communicated with clients to help prepare case files.
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- SALES -->
+
+      <div class="exp-item reveal">
+
+        <div
+          class="exp-head"
+          role="button"
+          tabindex="0"
+          aria-expanded="false">
+
+
+          <div>
+
+            <div class="exp-company">
+              Direct Sales
+            </div>
+
+            <div class="exp-role">
+              Branch Manager
+            </div>
+
+          </div>
+
+
+          <div class="exp-date">
+            2019 — 2024
+          </div>
+
+
+          <div
+            class="plus"
+            aria-hidden="true">
+
+            +
+
+          </div>
+
+        </div>
+
+
+        <div class="exp-content">
+
+          <div class="exp-content-inner">
+
+            Sold products directly to customers, explaining features
+            and benefits in detail. Consistently met monthly sales
+            targets and KPIs, handled objections professionally,
+            and built lasting client relationships to drive
+            satisfaction.
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+  <div class="container">
+
+    <div class="section-label">
+      Skills
+    </div>
+
+
+    <h2 class="section-title">
+      What I bring to a team
+    </h2>
+
+
+    <div class="skills-container">
+
+
+      <!-- GROUP 1 -->
+
+      <div class="skills-group reveal">
+
+        <div class="skills-category-title">
+          Working with people
+        </div>
+
+
+        <div class="skills-grid">
+
+
+          <div class="skill">
+            Effective communication
+          </div>
+
+
+          <div class="skill">
+            Public relations
+          </div>
+
+
+          <div class="skill">
+            Critical thinking
+          </div>
+
+
+          <div class="skill">
+            Teamwork
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- GROUP 2 -->
+
+      <div class="skills-group reveal">
+
+        <div class="skills-category-title">
+          Running the work
+        </div>
+
+
+        <div class="skills-grid">
+
+
+          <div class="skill">
+            Project management
+          </div>
+
+
+          <div class="skill">
+            Time management
+          </div>
+
+
+          <div class="skill">
+            Leadership
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section
+  class="education"
+  id="education">
+
+  <div class="container">
+
+    <div class="section-label">
+      Education
+    </div>
+
+
+    <h2 class="section-title">
+      Education & learning.
+    </h2>
+
+
+    <div class="edu-card reveal">
+
+
+      <div class="edu-title">
+        Bachelor of Law
+      </div>
+
+
+      <div class="edu-sub">
+        Faculty of Law — Helwan University
+      </div>
+
+
+      <div class="edu-sub">
+        Currently in progress
+      </div>
+
+
+      <div class="pills">
+
+
+        <div class="pill">
+          Basics of Sales Techniques
+        </div>
+
+
+        <div class="pill">
+          Introduction to Customer Service
+        </div>
+
+
+        <div class="pill">
+          Telephone Etiquette & Call Handling
+        </div>
+
+
+        <div class="pill">
+          Dealing with Difficult Customers
+        </div>
+
+
+        <div class="pill">
+          Effective Communication Skills
+        </div>
+
+
+        <div class="pill">
+          Time Management Fundamentals
+        </div>
+
+
+        <div class="pill">
+          Workplace Ethics & Professionalism
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+  class="contact"
+  id="contact">
+
+  <div class="container">
+
+    <div class="section-label">
+      Contact
+    </div>
+
+
+    <h2 class="section-title">
+      Let's connect.
+    </h2>
+
+
+    <div class="contact-grid">
+
+
+      <!-- EMAIL -->
+
+      <a
+        class="contact-card reveal"
+        href="mailto:ahmedliuo69@gmail.com">
+
+
+        <div class="contact-icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+
+
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="2">
+            </rect>
+
+
+            <path d="m3 7 9 6 9-6"></path>
+
+
+          </svg>
+
+        </div>
+
+
+        <h3>
+          Email me
+        </h3>
+
+
+        <p>
+          ahmedliuo69@gmail.com
+        </p>
+
+
+      </a>
+
+
+      <!-- PHONE -->
+
+      <a
+        class="contact-card reveal"
+        href="tel:+201098350518">
+
+
+        <div class="contact-icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.9"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+
+
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                     19.79 19.79 0 0 1-8.63-3.07
+                     19.5 19.5 0 0 1-6-6
+                     19.79 19.79 0 0 1-3.07-8.67
+                     A2 2 0 0 1 4.11 2h3
+                     a2 2 0 0 1 2 1.72
+                     12.84 12.84 0 0 0 .7 2.81
+                     2 2 0 0 1-.45 2.11L8.09 9.91
+                     a16 16 0 0 0 6 6l1.27-1.27
+                     a2 2 0 0 1 2.11-.45
+                     12.84 12.84 0 0 0 2.81.7
+                     A2 2 0 0 1 22 16.92z">
+            </path>
+
+
+          </svg>
+
+        </div>
+
+
+        <h3>
+          Call me
+        </h3>
+
+
+        <p>
+          +20 109 835 0518
+        </p>
+
+
+      </a>
+
+
+      <!-- WHATSAPP -->
+
+      <a
+        class="contact-card whatsapp-card reveal"
+        href="https://wa.me/201098350518"
+        target="_blank"
+        rel="noopener noreferrer">
+
+
+        <div class="contact-icon">
+
+
+          <svg
+            class="whatsapp-icon"
+            viewBox="0 0 32 32"
+            aria-hidden="true">
+
+
+            <path d="M16.02 3C8.84 3 3 8.82 3 15.99c0 2.29.6 4.52 1.75 6.49L3 29l6.72-1.7a13.01 13.01 0 0 0 6.3 1.61h.01c7.17 0 12.97-5.83 12.97-12.99C29 8.82 23.2 3 16.02 3zm0 23.58h-.01c-1.98 0-3.92-.53-5.61-1.54l-.4-.24-3.99 1.01 1.07-3.89-.26-.4a10.78 10.78 0 0 1-1.66-5.53c0-5.96 4.87-10.8 10.86-10.8 2.9 0 5.62 1.12 7.67 3.16a10.73 10.73 0 0 1 3.18 7.64c0 5.96-4.86 10.79-10.85 10.79zm5.92-8.08c-.32-.16-1.89-.93-2.18-1.04-.29-.11-.5-.16-.71.16-.21.31-.81 1.04-.99 1.25-.18.21-.36.24-.68.08-.32-.16-1.34-.49-2.55-1.57-.94-.84-1.58-1.88-1.76-2.2-.18-.31-.02-.48.14-.64.14-.14.32-.36.47-.53.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.72-.97-2.36-.26-.62-.52-.54-.71-.55h-.6c-.21 0-.55.08-.84.39-.29.31-1.1 1.08-1.1 2.63 0 1.55 1.13 3.04 1.29 3.25.16.21 2.22 3.39 5.37 4.76.75.32 1.34.51 1.8.65.76.24 1.46.21 2.01.13.61-.09 1.89-.77 2.16-1.51.26-.74.26-1.37.18-1.51-.08-.13-.29-.21-.6-.37z"/>
+
+          </svg>
+
+        </div>
+
+
+        <h3>
+          WhatsApp me
+        </h3>
+
+
+        <p>
+          Message me directly
+        </p>
+
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FLOATING ACTIONS
+========================= -->
+
+<div class="floating-actions">
+
+  <button
+    class="top-float"
+    id="topBtn"
+    aria-label="Back to top"
+    type="button">
+
+    ↑
+
+  </button>
+
+
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/201098350518"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with me on WhatsApp">
+
+    <svg
+      viewBox="0 0 32 32"
+      aria-hidden="true">
+
+
+      <path d="M16.02 3C8.84 3 3 8.82 3 15.99c0 2.29.6 4.52 1.75 6.49L3 29l6.72-1.7a13.01 13.01 0 0 0 6.3 1.61h.01c7.17 0 12.97-5.83 12.97-12.99C29 8.82 23.2 3 16.02 3zm0 23.58h-.01c-1.98 0-3.92-.53-5.61-1.54l-.4-.24-3.99 1.01 1.07-3.89-.26-.4a10.78 10.78 0 0 1-1.66-5.53c0-5.96 4.87-10.8 10.86-10.8 2.9 0 5.62 1.12 7.67 3.16a10.73 10.73 0 0 1 3.18 7.64c0 5.96-4.86 10.79-10.85 10.79zm5.92-8.08c-.32-.16-1.89-.93-2.18-1.04-.29-.11-.5-.16-.71.16-.21.31-.81 1.04-.99 1.25-.18.21-.36.24-.68.08-.32-.16-1.34-.49-2.55-1.57-.94-.84-1.58-1.88-1.76-2.2-.18-.31-.02-.48.14-.64.14-.14.32-.36.47-.53.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.72-.97-2.36-.26-.62-.52-.54-.71-.55h-.6c-.21 0-.55.08-.84.39-.29.31-1.1 1.08-1.1 2.63 0 1.55 1.13 3.04 1.29 3.25.16.21 2.22 3.39 5.37 4.76.75.32 1.34.51 1.8.65.76.24 1.46.21 2.01.13.61-.09 1.89-.77 2.16-1.51.26-.74.26-1.37.18-1.51-.08-.13-.29-.21-.6-.37z"/>
+
+    </svg>
+
+  </a>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  © 2026 Ahmed Sayed — Built with purpose.
+
+</footer>
+
+
+<script>
+
+
+/* =========================
+   THEME
+========================= */
+
+const themeBtn =
+  document.getElementById("themeBtn");
+
+
+const savedTheme =
+  localStorage.getItem("theme");
+
+
+if(savedTheme === "dark"){
+
+  document.body.classList.add("dark");
+
+  themeBtn.textContent = "☀";
+
+}
+
+
+themeBtn.addEventListener(
+  "click",
+  () => {
+
+    document.body.classList.toggle("dark");
+
+    const dark =
+      document.body.classList.contains("dark");
+
+    localStorage.setItem(
+      "theme",
+      dark ? "dark" : "light"
+    );
+
+    themeBtn.textContent =
+      dark ? "☀" : "☾";
+
+  }
+);
+
+
+/* =========================
+   SCROLL PROGRESS
+========================= */
+
+const progressBar =
+  document.getElementById("progress");
+
+
+const topBtn =
+  document.getElementById("topBtn");
+
+
+function handleScroll(){
+
+  const scrollTop =
+    window.scrollY;
+
+
+  const height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+
+
+  const progress =
+    height > 0
+      ? (scrollTop / height) * 100
+      : 0;
+
+
+  progressBar.style.width =
+    progress + "%";
+
+
+  if(scrollTop > 400){
+
+    topBtn.classList.add("show");
+
+  }else{
+
+    topBtn.classList.remove("show");
+
+  }
+
+}
+
+
+window.addEventListener(
+  "scroll",
+  handleScroll,
+  { passive:true }
+);
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+topBtn.addEventListener(
+  "click",
+  () => {
+
+    window.scrollTo({
+
+      top:0,
+
+      behavior:"smooth"
+
+    });
+
+  }
+);
+
+
+/* =========================
+   REVEAL ANIMATION
+========================= */
+
+const reveals =
+  document.querySelectorAll(".reveal");
+
+
+const revealObserver =
+  new IntersectionObserver(
+
+    (entries) => {
+
+      entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+          entry.target.classList.add(
+            "visible"
+          );
+
+          revealObserver.unobserve(
+            entry.target
+          );
+
+        }
+
+      });
+
+    },
+
+    {
+      threshold:.12
+    }
+
+  );
+
+
+reveals.forEach(element => {
+
+  revealObserver.observe(element);
+
+});
+
+
+/* =========================
+   APPROACH WORD ANIMATION
+========================= */
+
+const words =
+  document.querySelectorAll(".word");
+
+
+const wordObserver =
+  new IntersectionObserver(
+
+    (entries) => {
+
+      entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+          words.forEach(
+            (word,index) => {
+
+              setTimeout(
+
+                () => {
+
+                  word.classList.add(
+                    "show"
+                  );
+
+                },
+
+                index * 120
+
+              );
+
+            }
+
+          );
+
+          wordObserver.disconnect();
+
+        }
+
+      });
+
+    },
+
+    {
+      threshold:.3
+    }
+
+  );
+
+
+if(words.length){
+
+  wordObserver.observe(words[0]);
+
+}
+
+
+/* =========================
+   EXPERIENCE ACCORDION
+========================= */
+
+const experienceItems =
+  document.querySelectorAll(".exp-item");
+
+
+function closeAllExperience(){
+
+  experienceItems.forEach(item => {
+
+    item.classList.remove("open");
+
+
+    const content =
+      item.querySelector(".exp-content");
+
+
+    const head =
+      item.querySelector(".exp-head");
+
+
+    content.style.maxHeight =
+      null;
+
+
+    head.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+  });
+
+}
+
+
+function toggleExperience(item){
+
+  const isOpen =
+    item.classList.contains("open");
+
+
+  closeAllExperience();
+
+
+  if(!isOpen){
+
+    const content =
+      item.querySelector(".exp-content");
+
+
+    const head =
+      item.querySelector(".exp-head");
+
+
+    item.classList.add("open");
+
+
+    head.setAttribute(
+      "aria-expanded",
+      "true"
+    );
+
+
+    content.style.maxHeight =
+      content.scrollHeight + "px";
+
+  }
+
+}
+
+
+experienceItems.forEach(item => {
+
+  const head =
+    item.querySelector(".exp-head");
+
+
+  head.addEventListener(
+    "click",
+    () => {
+
+      toggleExperience(item);
+
+    }
+  );
+
+
+  head.addEventListener(
+    "keydown",
+    event => {
+
+      if(
+        event.key === "Enter" ||
+        event.key === " "
+      ){
+
+        event.preventDefault();
+
+        toggleExperience(item);
+
+      }
+
+    }
+  );
+
+});
+
+
+/* =========================
+   SKILL CLICK
+========================= */
+
+const skills =
+  document.querySelectorAll(".skill");
+
+
+skills.forEach(skill => {
+
+  skill.addEventListener(
+    "click",
+    () => {
+
+      skills.forEach(
+        s => s.classList.remove("active")
+      );
+
+
+      skill.classList.add("active");
+
+    }
+  );
+
+});
+
+
+/* =========================
+   EDUCATION COURSE CLICK
+========================= */
+
+const pills =
+  document.querySelectorAll(".pill");
+
+
+pills.forEach(pill => {
+
+  pill.addEventListener(
+    "click",
+    () => {
+
+      pills.forEach(
+        p => p.classList.remove("active")
+      );
+
+
+      pill.classList.add("active");
+
+    }
+  );
+
+});
+
+
+/* =========================
+   ACTIVE NAVIGATION
+========================= */
+
+const sections =
+  document.querySelectorAll(
+    "main section[id]"
+  );
+
+
+const navLinks =
+  document.querySelectorAll(
+    ".nav-links a"
+  );
+
+
+/*
+ * The navigation itself is the only
+ * element that should move horizontally
+ * on mobile.
+ */
+
+const navContainer =
+  document.querySelector(".nav-links");
+
+
+const navObserver =
+  new IntersectionObserver(
+
+    (entries) => {
+
+      entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+          const currentId =
+            entry.target.getAttribute("id");
+
+
+          navLinks.forEach(link => {
+
+            link.classList.remove(
+              "active"
+            );
+
+
+            if(
+              link.getAttribute("href") ===
+              "#" + currentId
+            ){
+
+              link.classList.add(
+                "active"
+              );
+
+
+              /*
+               * On mobile:
+               * move ONLY the navigation bar
+               * horizontally.
+               *
+               * This prevents scrollIntoView()
+               * from moving the whole page.
+               */
+
+              if(
+                window.innerWidth <= 700 &&
+                navContainer
+              ){
+
+                const linkLeft =
+                  link.offsetLeft;
+
+                const linkWidth =
+                  link.offsetWidth;
+
+                const containerWidth =
+                  navContainer.clientWidth;
+
+
+                navContainer.scrollTo({
+
+                  left:
+                    linkLeft -
+                    (containerWidth - linkWidth) / 2,
+
+                  behavior:"smooth"
+
+                });
+
+              }
+
+            }
+
+          });
+
+        }
+
+      });
+
+    },
+
+    {
+
+      rootMargin:
+        "-25% 0px -55% 0px",
+
+      threshold:0
+
+    }
+
+  );
+
+
+sections.forEach(section => {
+
+  navObserver.observe(section);
+
+});
+
+
+/* =========================
+   EDUCATION INITIAL STATE
+========================= */
+
+pills.forEach(pill => {
+
+  pill.classList.remove("active");
+
+});
+
+
+/* =========================
+   MOBILE TOUCH EFFECT
+========================= */
+
+document
+  .querySelectorAll(
+    ".skill,.contact-card,.stat"
+  )
+  .forEach(card => {
+
+    card.addEventListener(
+
+      "touchstart",
+
+      () => {
+
+        card.style.transform =
+          "translateY(-4px)";
+
+      },
+
+      { passive:true }
+
+    );
+
+
+    card.addEventListener(
+
+      "touchend",
+
+      () => {
+
+        setTimeout(
+
+          () => {
+
+            card.style.transform =
+              "";
+
+          },
+
+          180
+
+        );
+
+      },
+
+      { passive:true }
+
+    );
+
+  });
+
+
+/* =========================
+   INITIALIZE
+========================= */
+
+handleScroll();
+
+</script>
+
+</body>
+</html>
